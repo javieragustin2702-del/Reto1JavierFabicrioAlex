@@ -17,7 +17,7 @@ public class reto1 {
 		int num3 = 0;
 		do {
 			try {
-				System.out.println("Elige la operación:\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Par\n6. Impar\n7. Positivo\n8. Negativo\n");
+				System.out.println("Elige la operación:\n0. Salir\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Par\n6. Impar\n7. Positivo\n8. Negativo\n9. Máximo de 3\n10. Mínimo de 3\n");
 				opciones = Integer.parseInt(sc.nextLine());
 				switch (opciones) {
 				case 0: 
@@ -27,11 +27,14 @@ public class reto1 {
 					System.out.println("Escribe 2 números");
 					num1 = Integer.parseInt(sc.nextLine());
 					num2 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones2.sumar(num1, num2));
 					break;
 				case 2:
 					System.out.println("Escribe 2 números");
 					num1 = Integer.parseInt(sc.nextLine());
 					num2 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones2.restar(num1, num2));
+
 					break;
 				case 3:
 					System.out.println("Escribe 2 números");
@@ -48,17 +51,44 @@ public class reto1 {
 				case 5: 
 					System.out.println("Escribe un número");
 					num1 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones2.esPar(num1));
 					break;
 				case 6:
+					System.out.println("Escribe un número");
 					num1 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones2.esImpar(num1));
+
+					break;
+				case 7:
+					System.out.println("Escribe un número");
+					num1 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones3.EsPositivo(num1));
+					break;
+				case 8:
+					System.out.println("Escribe un número");
+					num1 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones3.EsNegativo(num1));
+					break;
+				case 9:
+					System.out.println("Escribe 3 números");
+					num1 = Integer.parseInt(sc.nextLine());
+					num2 = Integer.parseInt(sc.nextLine());
+					num3 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones1.maximo3(num1, num2, num3));
+					break;
+				case 10:
+					System.out.println("Escribe 3 números");
+					num1 = Integer.parseInt(sc.nextLine());
+					num2 = Integer.parseInt(sc.nextLine());
+					num3 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones1.minimo3(num1, num2, num3));
 					break;
 				default:
+					System.out.println("que me des un número del 0 al 10");
 				}
 			} catch (Exception e) {
-				System.out.println("que me des un número del 0 al 8");
 			}
 		} while (salir != false);
-		salir = true;
 		
 	}
 

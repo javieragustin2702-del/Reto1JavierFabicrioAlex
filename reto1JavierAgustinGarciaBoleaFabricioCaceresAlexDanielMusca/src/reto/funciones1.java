@@ -11,7 +11,7 @@ public class funciones1 {
 	}
 
 	public static int minimo3(int num1, int num2, int num3) {
-		int menor1 = Math.max(num1, num2);
+		int menor1 = Math.min(num1, num2);
 		int menor2 = Math.min(menor1, num3);
 		return menor2;
 	}
