@@ -17,7 +17,7 @@ public class reto1 {
 		int num3 = 0;
 		do {
 			try {
-				System.out.println("Elige la operación:\n 1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Par\n6. Impar\n7. Positivo\n8. Negativo\n");
+				System.out.println("Elige la operación:\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Par\n6. Impar\n7. Positivo\n8. Negativo\n");
 				opciones = Integer.parseInt(sc.nextLine());
 				switch (opciones) {
 				case 0: 
@@ -29,10 +29,33 @@ public class reto1 {
 					num2 = Integer.parseInt(sc.nextLine());
 					break;
 				case 2:
-					
+					System.out.println("Escribe 2 números");
+					num1 = Integer.parseInt(sc.nextLine());
+					num2 = Integer.parseInt(sc.nextLine());
+					break;
+				case 3:
+					System.out.println("Escribe 2 números");
+					num1 = Integer.parseInt(sc.nextLine());
+					num2 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones3.multiplicar(num1,num2));
+					break;
+				case 4:
+					System.out.println("Escribe 2 números");
+					num1 = Integer.parseInt(sc.nextLine());
+					num2 = Integer.parseInt(sc.nextLine());
+					System.out.println(funciones3.dividir(num1,num2));
+					break;
+				case 5: 
+					System.out.println("Escribe un número");
+					num1 = Integer.parseInt(sc.nextLine());
+					break;
+				case 6:
+					num1 = Integer.parseInt(sc.nextLine());
+					break;
 				default:
 				}
 			} catch (Exception e) {
+				System.out.println("que me des un número del 0 al 8");
 			}
 		} while (salir != false);
 		salir = true;
